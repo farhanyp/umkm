@@ -1,0 +1,189 @@
+/* 1. Variabel Warna Brand Kebab Mandiri */
+:root {
+  --km-primary: #8d4b00;          /* Cokelat Kebab Khas */
+  --km-primary-hover: #b15f00;    /* Cokelat Terang saat hover */
+  --km-primary-bg: #ffdcc3;       /* Aksen Cokelat Muda */
+  --km-secondary: #3e6a00;        /* Hijau Segar */
+  --km-secondary-bg: #b9f079;     /* Aksen Hijau Muda */
+  --km-tertiary: #864d31;         /* Aksen Harga & Badge Cokelat */
+  --km-bg-hero: #f4f2fd;          /* Latar Belakang Bagian Hero */
+  --km-bg-about: #e8e7f1;         /* Latar Belakang Bagian About */
+  --km-bg-footer: #e3e1ec;        /* Latar Belakang Footer */
+}
+
+/* 2. Pengaturan Font & Dasar */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1a1b22;
+  scroll-behavior: smooth;
+  background-color: #fbf8ff;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
+  vertical-align: middle;
+}
+
+/* 3. Helper Warna Brand */
+.text-km-primary { color: var(--km-primary) !important; }
+.text-km-secondary { color: var(--km-secondary) !important; }
+.text-km-tertiary { color: var(--km-tertiary) !important; }
+
+.bg-km-hero { background-color: var(--km-bg-hero); }
+.bg-km-about { background-color: var(--km-bg-about); }
+.bg-km-footer { background-color: var(--km-bg-footer); }
+
+/* 4. Tombol Kustom */
+/* Tombol Utama (Pill Cokelat) */
+.btn-km-primary {
+  background-color: var(--km-primary);
+  color: #ffffff !important;
+  border-radius: 50rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.btn-km-primary:hover {
+  background-color: var(--km-primary-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(141, 75, 0, 0.25);
+}
+
+/* Tombol Garis (Outline) */
+.btn-km-outline {
+  background-color: transparent;
+  color: var(--km-primary) !important;
+  border: 1px solid #887364;
+  border-radius: 50rem;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.btn-km-outline:hover {
+  background-color: rgba(141, 75, 0, 0.08);
+  color: var(--km-primary) !important;
+}
+
+/* Tombol Ikon Keranjang & Tambah */
+.btn-km-icon {
+  background-color: var(--km-primary);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-km-icon:hover {
+  background-color: var(--km-primary-hover);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.btn-km-icon-ghost {
+  background-color: rgba(177, 95, 0, 0.12);
+  color: var(--km-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-km-icon-ghost:hover {
+  background-color: rgba(177, 95, 0, 0.22);
+  color: var(--km-primary);
+}
+
+/* 5. Detail Visual & Efek Unik */
+/* Kemiringan Gambar Hero */
+.hero-image-box {
+  transform: rotate(2deg);
+  transition: transform 0.4s ease;
+  border: 4px solid #ffffff;
+}
+.hero-image-box:hover {
+  transform: rotate(0deg);
+}
+
+/* Kemiringan Gambar About */
+.about-image-box {
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease;
+  border: 6px solid #ffffff;
+}
+.about-image-box:hover {
+  transform: rotate(0deg);
+}
+
+/* Floating Badge "Top Rated" */
+.floating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 12px 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Kartu Menu */
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+.menu-card img {
+  transition: transform 0.4s ease;
+}
+.menu-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Banner WhatsApp */
+.contact-banner {
+  background-color: var(--km-primary-hover);
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.contact-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: radial-gradient(#ffffff 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+.btn-whatsapp {
+  background-color: #ffffff;
+  color: var(--km-primary) !important;
+  border-radius: 50rem;
+  padding: 0.85rem 2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-whatsapp:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.04);
+  color: var(--km-primary-hover) !important;
+}

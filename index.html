@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebab Mandiri: Lezat, Mantap, Mandiri</title>
+
+    <!-- Bootstrap 5 CSS CDN (Membuat tampilan responsif & rapi dengan mudah) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Font (Plus Jakarta Sans) & Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- File Style Kustom (Hanya untuk warna tema & efek visual khusus) -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ========================================================
+         1. NAVBAR / MENU NAVIGASI (Sticky di bagian atas)
+         ======================================================== -->
+    <header class="sticky-top bg-white bg-opacity-95 shadow-sm" style="backdrop-filter: blur(10px);">
+        <nav class="navbar navbar-expand-md py-3">
+            <div class="container">
+                <!-- Logo Brand -->
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-km-primary fs-4" href="#hero">
+                    <span class="material-symbols-outlined fs-2">kebab_dining</span>
+                    <span>Kebab Mandiri</span>
+                </a>
+
+                <!-- Tombol Hamburger untuk Layar HP (Mobile) -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Tautan Menu Navigasi -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-3 mb-md-0 fw-semibold text-center gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-km-primary fw-bold" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tombol Pesan Sekarang di Navbar -->
+                    <div class="text-center">
+                        <a href="#menu" class="btn btn-km-primary py-2 px-4 shadow-sm">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================
+             2. HERO SECTION (Tampilan Pembuka Utama)
+             ======================================================== -->
+        <section class="py-5 bg-km-hero" id="hero">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-5">
+                    <!-- Teks Judul & Ajakan Aksi -->
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-5 fw-bold mb-3">
+                            Kebab Mandiri:<br />
+                            <span class="text-km-primary">Lezat, Mantap, Mandiri</span>
+                        </h1>
+                        <p class="text-muted fs-5 mb-4 pe-lg-4">
+                            Nikmati sensasi kebab dengan daging sapi pilihan, sayuran segar, dan saus rahasia yang
+                            menggugah selera. Cita rasa lokal dengan kualitas premium yang siap memanjakan lidah Anda.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#menu" class="btn btn-km-primary d-inline-flex align-items-center justify-content-center gap-2">
+                                <span>Order Now</span>
+                                <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                            </a>
+                            <a href="#about" class="btn btn-km-outline">Our Story</a>
+                        </div>
+                    </div>
+
+                    <!-- Gambar Kebab & Floating Badge -->
+                    <div class="col-lg-6">
+                        <div class="position-relative mx-auto" style="max-width: 440px;">
+                            <!-- Wadah Gambar dengan Sedikit Rotasi Unik -->
+                            <div class="hero-image-box rounded-4 overflow-hidden shadow-lg ratio ratio-1x1">
+                                <img src="assets/image.png" alt="Kebab Daging Sapi Lezat" class="w-100 h-100 object-fit-cover" />
+                            </div>
+
+                            <!-- Lencana Melayang "Top Rated" -->
+                            <div class="floating-badge d-flex align-items-center gap-3">
+                                <div class="rounded-circle p-2 d-flex align-items-center justify-content-center text-white" style="background-color: var(--km-tertiary);">
+                                    <span class="material-symbols-outlined fs-5">star</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Top Rated</h6>
+                                    <small class="text-muted">Local Favorite</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             3. MENU SECTION (Daftar Produk Kebab)
+             ======================================================== -->
+        <section class="py-5" id="menu">
+            <div class="container py-lg-4">
+                <!-- Judul Section -->
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold mb-2">Menu Andalan Kami</h2>
+                    <p class="text-muted">Pilihan kebab terbaik dengan bahan-bahan segar berkualitas tinggi.</p>
+                </div>
+
+                <!-- Grid Menu -->
+                <div class="row g-4">
+                    <!-- Produk 1: Card Lebar (8 Kolom di Layar Komputer) -->
+                    <div class="col-lg-8">
+                        <div class="card menu-card border-0 shadow-sm h-100 bg-km-hero">
+                            <div class="row g-0 h-100">
+                                <div class="col-md-5">
+                                    <img src="assets/image.png" alt="Kebab Daging Sapi Original" class="w-100 h-100 object-fit-cover" style="min-height: 240px;" />
+                                </div>
+                                <div class="col-md-7 p-4 p-lg-5 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <span class="badge rounded-pill px-3 py-2 mb-3 fw-semibold text-dark" style="background-color: var(--km-secondary-bg);">
+                                            Best Seller
+                                        </span>
+                                        <h3 class="h4 fw-bold mb-2">Kebab Daging Sapi Original</h3>
+                                        <p class="text-muted small mb-4">
+                                            Kebab klasik dengan isian daging sapi panggang berlimpah, sayuran segar
+                                            (selada, tomat, bawang bombay), dan perpaduan saus mayo serta saus sambal
+                                            spesial Kebab Mandiri.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between pt-2">
+                                        <span class="fs-4 fw-bold text-km-tertiary">Rp 15.000</span>
+                                        <button class="btn-km-icon" aria-label="Tambah pesanan">
+                                            <span class="material-symbols-outlined fs-5">add_shopping_cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produk 2: Card Sedang (4 Kolom di Layar Komputer) -->
+                    <div class="col-lg-4">
+                        <div class="card menu-card border-0 shadow-sm h-100 bg-white">
+                            <div style="height: 200px; overflow: hidden;">
+                                <img src="assets/image.png" alt="Kebab Spesial Keju" class="w-100 h-100 object-fit-cover" />
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="h5 fw-bold mb-2">Kebab Spesial Keju</h3>
+                                    <p class="text-muted small mb-4">
+                                        Sensasi keju lumer yang berpadu sempurna dengan daging sapi panggang yang gurih
+                                        dan sayuran segar.
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-5 fw-bold text-km-tertiary">Rp 18.000</span>
+                                    <button class="btn-km-icon-ghost" aria-label="Tambah keju">
+                                        <span class="material-symbols-outlined fs-5">add</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produk 3: Card Penuh (12 Kolom / Full Width) -->
+                    <div class="col-12">
+                        <div class="card menu-card border-0 shadow-sm bg-white">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-lg-6 p-4 p-lg-5 order-2 order-lg-1">
+                                    <span class="badge rounded-pill px-3 py-2 mb-3 fw-bold" style="background-color: var(--km-primary-bg); color: var(--km-primary);">
+                                        Extra Besar
+                                    </span>
+                                    <h3 class="h4 fw-bold mb-2">Kebab Jumbo Porsi Puas</h3>
+                                    <p class="text-muted small mb-4">
+                                        Untuk Anda yang butuh porsi ekstra! Ukuran tortilla lebih besar, ekstra daging sapi,
+                                        ekstra sayuran, dan dijamin mengenyangkan. Cocok untuk hidangan utama.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="fs-4 fw-bold text-km-tertiary">Rp 22.000</span>
+                                        <a href="#contact" class="btn btn-km-primary py-2 px-4">Pesan Sekarang</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 order-1 order-lg-2" style="height: 260px; overflow: hidden;">
+                                    <img src="assets/image.png" alt="Kebab Jumbo Porsi Puas" class="w-100 h-100 object-fit-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             4. ABOUT SECTION (Tentang UMKM Kami)
+             ======================================================== -->
+        <section class="py-5 bg-km-about" id="about">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-5">
+                    <!-- Teks Tentang Kami -->
+                    <div class="col-lg-6">
+                        <div class="d-inline-flex align-items-center gap-2 text-km-primary fw-bold text-uppercase small mb-2">
+                            <span style="width: 28px; height: 2px; background-color: var(--km-primary);"></span>
+                            <span>Kisah Kami</span>
+                        </div>
+                        <h2 class="fw-bold mb-3">Lebih dari Sekedar Kebab, Ini Tentang Kualitas Lokal.</h2>
+                        <p class="text-muted">
+                            Kebab Mandiri lahir dari passion untuk menghadirkan jajanan kaki lima dengan standar kualitas
+                            restoran. Kami percaya bahwa makanan enak harus bisa dinikmati semua orang.
+                        </p>
+                        <p class="text-muted mb-4">
+                            Setiap gulungan kebab kami dibuat dengan tortilla yang dipanggang sempurna, daging sapi yang
+                            dimarinasi bumbu rempah pilihan, dan sayuran yang dipastikan kesegarannya setiap hari. Kami
+                            bangga menjadi bagian dari UMKM lokal yang terus berkomitmen memberikan yang terbaik.
+                        </p>
+
+                        <!-- Poin Keunggulan -->
+                        <div class="row g-3">
+                            <div class="col-6 d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined text-km-secondary fs-1">verified_user</span>
+                                <div>
+                                    <h6 class="fw-bold mb-0">100% Halal</h6>
+                                    <small class="text-muted">Bersih & Terjamin</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center gap-3">
+                                <span class="material-symbols-outlined text-km-secondary fs-1">local_shipping</span>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Bahan Segar</h6>
+                                    <small class="text-muted">Pasokan Setiap Hari</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gambar Bagian About -->
+                    <div class="col-lg-6">
+                        <div class="about-image-box rounded-5 overflow-hidden shadow-lg ratio ratio-4x3 mx-auto" style="max-width: 480px;">
+                            <img src="assets/image.png" alt="Kebab Mandiri Preparation" class="w-100 h-100 object-fit-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             5. CONTACT / CALL TO ACTION (Pemesanan WhatsApp)
+             ======================================================== -->
+        <section class="py-5" id="contact">
+            <div class="container py-lg-3">
+                <div class="contact-banner p-4 p-md-5 text-white text-center shadow-lg mx-auto" style="max-width: 860px;">
+                    <div class="contact-pattern"></div>
+                    <div class="position-relative" style="z-index: 2;">
+                        <span class="material-symbols-outlined display-4 mb-3">storefront</span>
+                        <h2 class="fw-bold mb-3">Siap Menikmati Kebab Lezat Hari Ini?</h2>
+                        <p class="mb-4 mx-auto lead fs-6" style="max-width: 520px; opacity: 0.95;">
+                            Pesan sekarang melalui WhatsApp untuk respon cepat. Kami juga melayani pesanan dalam jumlah
+                            besar untuk acara Anda.
+                        </p>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-whatsapp d-inline-flex align-items-center gap-2 shadow">
+                            <span class="material-symbols-outlined text-success fs-5">chat</span>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                        <div class="mt-4 small opacity-75">
+                            Buka Setiap Hari: 15.00 - 22.00 WIB
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         6. FOOTER (Kaki Halaman)
+         ======================================================== -->
+    <footer class="py-4 bg-km-footer text-muted border-top">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
+            <div class="d-flex align-items-center gap-2 fw-bold text-km-primary fs-5">
+                <span class="material-symbols-outlined">kebab_dining</span>
+                <span>Kebab Mandiri</span>
+            </div>
+            <div class="small">
+                &copy; 2024 Kebab Mandiri. Freshly Grilled Local Delights.
+            </div>
+            <div class="d-flex gap-3 small">
+                <a href="#" class="text-decoration-none text-muted">Privacy Policy</a>
+                <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                <a href="https://wa.me/6281234567890" class="text-decoration-none text-muted">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle (Termasuk Popper untuk fungsi dropdown & hamburger menu) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script sederhana untuk menandai link navbar yang aktif saat di-scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-km-primary', 'fw-bold');
+                    link.classList.add('text-secondary');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.remove('text-secondary');
+                        link.classList.add('text-km-primary', 'fw-bold');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
